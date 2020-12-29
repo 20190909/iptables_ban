@@ -17,8 +17,10 @@ smtp_port="25,26,465,587"
 pop3_port="109,110,995"
 imap_port="143,218,220,993"
 other_port="24,50,57,105,106,158,209,1109,24554,60177,60179"
-bt_key_word="torrent
+bt_key_word="ed2k
+torrent
 .torrent
+bt_key
 peer_id=
 announce
 info_hash
