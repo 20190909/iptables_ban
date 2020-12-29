@@ -4,7 +4,7 @@ Modified from  [iptables 封禁 BT、PT、SPAM（垃圾邮件）和自定义端�
 
 #### Install:
 
-```wget -N --no-check-certificate wget -N --no-check-certificate "https://raw.githubusercontent.com/Deinococci/iptables_ban/main/iptables_ban.sh" && chmod +x iptables_ban.sh && bash iptables_ban.sh```
+```wget -N --no-check-certificate https://raw.githubusercontent.com/Deinococci/iptables_ban/main/iptables_ban.sh && chmod +x iptables_ban.sh && bash iptables_ban.sh```
 
 #### Instructions:
 
