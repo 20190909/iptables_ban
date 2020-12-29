@@ -444,7 +444,7 @@ if [[ ! -z $action ]]; then
 	[[ $action = "unbanall" ]] && UnBan_ALL && exit 0
 fi
 echo && echo -e "iptables ban management script ${Red_font_prefix}[v${sh_ver}]${Font_color_suffix}
-  --  Deinococci  | https://github.com/Deinococci/iptables_ban --
+  --  iptables ban script  | https://github.com/Deinococci/iptables_ban --
 
   ${Green_font_prefix}0.${Font_color_suffix} View current banned list
 ————————————
