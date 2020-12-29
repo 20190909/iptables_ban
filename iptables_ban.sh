@@ -8,7 +8,7 @@ export PATH
 #       Github: https://github.com/Deinococci/iptables_ban
 #=================================================
 
-sh_ver="1.0.10"
+sh_ver="1.0.0"
 Green_font_prefix="\033[32m" && Red_font_prefix="\033[31m" && Green_background_prefix="\033[42;37m" && Red_background_prefix="\033[41;37m" && Font_color_suffix="\033[0m"
 Info="${Green_font_prefix}[info]${Font_color_suffix}"
 Error="${Red_font_prefix}[error]${Font_color_suffix}"
@@ -109,10 +109,7 @@ Save_iptables_v4_v6(){
 	fi
 }
 Set_key_word() { $1 -t mangle -$3 OUTPUT -m string --string "$2" --algo bm --to 65535 -j DROP; }
-Set_tcp_port() {
-	[[ "$1" = "$v4iptables" ]] && $1 -t filter -$3 OUTPUT -p tcp -m multiport --dports "$2" -m state --state NEW,ESTABLISHED -j REJECT --reject-with icmp-port-unreachable
-	[[ "$1" = "$v6iptables" ]] && $1 -t filter -$3 OUTPUT -p tcp -m multiport --dports "$2" -m state --state NEW,ESTABLISHED -j REJECT --reject-with tcp-reset
-}
+Set_tcp_port() { $1 -t filter -$3 OUTPUT -p tcp -m multiport --dports "$2" -j DROP; }
 Set_udp_port() { $1 -t filter -$3 OUTPUT -p udp -m multiport --dports "$2" -j DROP; }
 Set_SPAM_Code_v4(){
 	for i in ${smtp_port} ${pop3_port} ${imap_port} ${other_port}
