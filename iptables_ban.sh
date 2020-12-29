@@ -4,11 +4,11 @@ export PATH
 #=================================================
 #       System Required: CentOS/Debian/Ubuntu
 #       Description: iptables ban BT、PT、SPAM and custom ports, keywords
-#       Version: 1.0.0
+#       Version: 1.0.1
 #       Github: https://github.com/Deinococci/iptables_ban
 #=================================================
 
-sh_ver="1.0.0"
+sh_ver="1.0.1"
 Green_font_prefix="\033[32m" && Red_font_prefix="\033[31m" && Green_background_prefix="\033[42;37m" && Red_background_prefix="\033[41;37m" && Font_color_suffix="\033[0m"
 Info="${Green_font_prefix}[info]${Font_color_suffix}"
 Error="${Red_font_prefix}[error]${Font_color_suffix}"
@@ -34,6 +34,10 @@ magnet:
 xunlei
 sandai
 Thunder
+speedtest
+speedcheck
+fast.com
+kpzip
 XLLiveUD"
 
 check_sys(){
