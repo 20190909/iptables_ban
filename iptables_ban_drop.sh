@@ -435,9 +435,9 @@ Debian / Ubuntu: apt-get install iptables -y"
 	fi
 }
 Update_Shell(){
-	sh_new_ver=$(wget --no-check-certificate -qO- -t1 -T3 "https://raw.githubusercontent.com/Deinococci/iptables_ban/main/iptables_ban.sh"|grep 'sh_ver="'|awk -F "=" '{print $NF}'|sed 's/\"//g'|head -1)
+	sh_new_ver=$(wget --no-check-certificate -qO- -t1 -T3 "https://raw.githubusercontent.com/Deinococci/iptables_ban/main/iptables_ban_drop.sh"|grep 'sh_ver="'|awk -F "=" '{print $NF}'|sed 's/\"//g'|head -1)
 	[[ -z ${sh_new_ver} ]] && echo -e "${Error} Unable to connect to Github!" && exit 0
-	wget -N --no-check-certificate "https://raw.githubusercontent.com/Deinococci/iptables_ban/main/iptables_ban.sh" && chmod +x iptables_ban.sh
+	wget -N --no-check-certificate "https://raw.githubusercontent.com/Deinococci/iptables_ban/main/iptables_ban_drop.sh" && chmod +x iptables_ban_drop.sh
 	echo -e "The script has been updated to the latest version[ ${sh_new_ver} ]! (Note: Because the update method is to directly overwrite the currently running script, some errors may be prompted below, just ignore it)" && exit 0
 }
 check_sys
