@@ -35,6 +35,9 @@ xunlei
 sandai
 Thunder
 speedtest
+/speedtest
+speedtest.
+.speedtest.
 fast.com
 kpzip
 XLLiveUD"
