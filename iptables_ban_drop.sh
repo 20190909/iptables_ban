@@ -67,7 +67,7 @@ check_SPAM(){
 	SPAM_PORT=$(echo -e "$Ban_PORT_list"|grep "${smtp_port}")
 }
 Cat_PORT(){
-	Ban_PORT_list=$(iptables -t filter -L OUTPUT -nvx --line-numbers|grep "REJECT"|awk '{print $13}')
+	Ban_PORT_list=$(iptables -t filter -L OUTPUT -nvx --line-numbers|grep "DROP"|awk '{print $13}')
 }
 Cat_KEY_WORDS(){
 	Ban_KEY_WORDS_list=""
